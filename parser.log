@@ -1,0 +1,55 @@
+2024-04-14 23:03:28,851 ERROR Exception occurred for link: https://www.labirint.ru/books/986317/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_3124\395146186.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-14 23:03:56,629 ERROR Exception occurred for link: https://www.labirint.ru/books/844320/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_3124\395146186.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-14 23:06:30,510 ERROR Exception occurred for link: https://www.labirint.ru/books/844323/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_3124\395146186.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-14 23:13:59,107 ERROR Exception occurred for link: https://www.labirint.ru/books/584693/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_3124\395146186.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-14 23:15:09,628 ERROR Exception occurred for link: https://www.labirint.ru/books/873800/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_3124\395146186.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-14 23:15:24,458 ERROR Exception occurred for link: https://www.labirint.ru/books/892625/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_3124\395146186.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-14 23:15:30,653 ERROR Exception occurred for link: https://www.labirint.ru/books/886372/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_3124\395146186.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-14 23:15:31,703 ERROR Exception occurred for link: https://www.labirint.ru/books/884476/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_3124\395146186.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-14 23:15:36,503 ERROR Exception occurred for link: https://www.labirint.ru/books/881168/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_3124\395146186.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-14 23:15:45,120 ERROR Exception occurred for link: https://www.labirint.ru/books/817301/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_3124\395146186.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-14 23:16:22,881 ERROR Exception occurred for link: https://www.labirint.ru/books/916656/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_3124\395146186.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
