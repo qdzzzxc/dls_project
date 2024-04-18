@@ -1,5 +1,6 @@
 import os
 
+import logging
 import joblib
 import numpy as np
 import pandas as pd
@@ -23,12 +24,12 @@ else:
 if os.path.exists(os.path.join(".", "vectorizer.pkl")) and os.path.exists(
     os.path.join(".", "tfidf_vectors.npy")
 ):
-    # print("Vectorizer loaded")
+    logging.info('Vectorizer loaded')
     vectorizer = joblib.load("vectorizer.pkl")
 
     tfidf_vectors = np.load("tfidf_vectors.npy", allow_pickle=True).item()
 else:
-    # print("Vectorizer created")
+    logging.info('Vectorizer created')
     vectorizer = TfidfVectorizer()
 
     tfidf_vectors = vectorizer.fit_transform(all_rows.name)

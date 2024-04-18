@@ -2,3 +2,8 @@
 [18/Apr/24 16:11:11] [INFO]: Start polling
 [18/Apr/24 16:11:11] [INFO]: Run polling for bot @BooksCvAnalysisBot id=6636712785 - 'Анализ книг по фото'
 [18/Apr/24 16:11:38] [INFO]: The masked text was received and saved
+[18/Apr/24 16:11:47] [INFO]: Yandex OCR has worked out
+[18/Apr/24 16:11:51] [INFO]: error correction with the mixtral worked out
+[18/Apr/24 16:11:51] [INFO]: Cosine search worked out
+[18/Apr/24 16:11:58] [INFO]: Mixtral answer generation worked out
+[18/Apr/24 16:11:58] [INFO]: Update id=643794956 is handled. Duration 21170 ms by bot id=6636712785
