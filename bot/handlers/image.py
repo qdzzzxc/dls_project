@@ -77,14 +77,6 @@ async def get_photo(message: Message, bot: Bot):
     await msg.delete()
 
 
-def process_photo(bytes):
-    return predict_model1(bytes), predict_model2(bytes)
-
-
-def gen_text(bytes, style):
-    return predict_model3(bytes, style)
-
-
 @router.message()
 async def no_filter_answer(message: Message):
     await message.reply("Чтобы начать работу бота, просто отправьте любую фотографию")

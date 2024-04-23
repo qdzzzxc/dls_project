@@ -1,9 +1,14 @@
-[18/Apr/24 16:11:11] [INFO]: Started in 0:00:04.864431
-[18/Apr/24 16:11:11] [INFO]: Start polling
-[18/Apr/24 16:11:11] [INFO]: Run polling for bot @BooksCvAnalysisBot id=6636712785 - 'Анализ книг по фото'
-[18/Apr/24 16:11:38] [INFO]: The masked text was received and saved
-[18/Apr/24 16:11:47] [INFO]: Yandex OCR has worked out
-[18/Apr/24 16:11:51] [INFO]: error correction with the mixtral worked out
-[18/Apr/24 16:11:51] [INFO]: Cosine search worked out
-[18/Apr/24 16:11:58] [INFO]: Mixtral answer generation worked out
-[18/Apr/24 16:11:58] [INFO]: Update id=643794956 is handled. Duration 21170 ms by bot id=6636712785
+[23/Apr/24 22:21:40] [INFO]: Started in 0:00:05.377443
+[23/Apr/24 22:21:40] [INFO]: Start polling
+[23/Apr/24 22:21:40] [INFO]: Run polling for bot @BooksCvAnalysisBot id=6636712785 - 'Анализ книг по фото'
+[23/Apr/24 22:21:41] [INFO]: Update id=643794986 is handled. Duration 250 ms by bot id=6636712785
+[23/Apr/24 22:22:10] [INFO]: The masked text was received and saved
+[23/Apr/24 22:22:19] [INFO]: Yandex OCR has worked out
+[23/Apr/24 22:22:22] [INFO]: error correction with the mixtral worked out
+[23/Apr/24 22:22:22] [INFO]: sql request
+[23/Apr/24 22:22:22] [INFO]: Cosine search worked out
+[23/Apr/24 22:22:34] [INFO]: Mixtral answer generation worked out
+[23/Apr/24 22:22:34] [INFO]: Update id=643794987 is handled. Duration 24577 ms by bot id=6636712785
+[23/Apr/24 22:23:00] [INFO]: Polling stopped
+[23/Apr/24 22:23:00] [INFO]: Stopped, worked for 0:01:25.426538
+[23/Apr/24 22:23:00] [INFO]: Polling stopped for bot @BooksCvAnalysisBot id=6636712785 - 'Анализ книг по фото'

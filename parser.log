@@ -1,85 +1,95 @@
-2024-04-17 20:28:54,832 ERROR Exception occurred for link: https://www.labirint.ru/books/817306/
+2024-04-23 20:13:14,840 ERROR Exception occurred for link: https://www.labirint.ru/books/702477/
 Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 32, in <module>
     descr = descr[0].text_content()
 IndexError: list index out of range
-2024-04-17 20:29:37,694 ERROR Exception occurred for link: https://www.labirint.ru/books/897902/
+2024-04-23 20:20:11,120 ERROR Exception occurred for link: https://www.labirint.ru/books/923643/
 Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:29:47,722 ERROR Exception occurred for link: https://www.labirint.ru/books/892549/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:29:49,922 ERROR Exception occurred for link: https://www.labirint.ru/books/891970/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:29:59,596 ERROR Exception occurred for link: https://www.labirint.ru/books/903329/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:30:00,759 ERROR Exception occurred for link: https://www.labirint.ru/books/902413/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:30:15,800 ERROR Exception occurred for link: https://www.labirint.ru/books/903401/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:30:32,766 ERROR Exception occurred for link: https://www.labirint.ru/books/881238/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:30:46,030 ERROR Exception occurred for link: https://www.labirint.ru/books/903340/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:31:06,932 ERROR Exception occurred for link: https://www.labirint.ru/books/896731/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:31:18,639 ERROR Exception occurred for link: https://www.labirint.ru/books/898060/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:32:02,765 ERROR Exception occurred for link: https://www.labirint.ru/books/857310/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:32:46,253 ERROR Exception occurred for link: https://www.labirint.ru/books/716279/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:33:07,093 ERROR Exception occurred for link: https://www.labirint.ru/books/898638/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:37:03,688 ERROR Exception occurred for link: https://www.labirint.ru/books/768179/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\3747864753.py", line 32, in <module>
-    descr = descr[0].text_content()
-IndexError: list index out of range
-2024-04-17 20:41:24,090 ERROR Exception occurred for link: https://www.labirint.ru/books/783682/
-Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\2213925547.py", line 44, in <module>
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
     pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
 IndexError: list index out of range
-2024-04-17 20:41:55,803 ERROR Exception occurred for link: https://www.labirint.ru/books/969979/
+2024-04-23 20:20:17,610 ERROR Exception occurred for link: https://www.labirint.ru/books/923642/
 Traceback (most recent call last):
-  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_11400\2213925547.py", line 32, in <module>
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:21:00,439 ERROR Exception occurred for link: https://www.labirint.ru/books/1000979/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:22:25,608 ERROR Exception occurred for link: https://www.labirint.ru/books/933209/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:22:39,193 ERROR Exception occurred for link: https://www.labirint.ru/books/753731/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:22:40,341 ERROR Exception occurred for link: https://www.labirint.ru/books/933208/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:22:46,697 ERROR Exception occurred for link: https://www.labirint.ru/books/937228/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:23:49,899 ERROR Exception occurred for link: https://www.labirint.ru/books/937788/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:25:12,718 ERROR Exception occurred for link: https://www.labirint.ru/books/859293/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:26:58,346 ERROR Exception occurred for link: https://www.labirint.ru/books/455885/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:27:01,265 ERROR Exception occurred for link: https://www.labirint.ru/books/455884/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:27:18,325 ERROR Exception occurred for link: https://www.labirint.ru/books/484479/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-23 20:27:27,224 ERROR Exception occurred for link: https://www.labirint.ru/books/851206/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:29:28,958 ERROR Exception occurred for link: https://www.labirint.ru/books/446220/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-23 20:29:40,195 ERROR Exception occurred for link: https://www.labirint.ru/books/517036/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:32:04,419 ERROR Exception occurred for link: https://www.labirint.ru/books/366331/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 32, in <module>
+    descr = descr[0].text_content()
+IndexError: list index out of range
+2024-04-23 20:33:38,059 ERROR Exception occurred for link: https://www.labirint.ru/books/517048/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 44, in <module>
+    pic_url = tree.xpath("//div[@id='product-image']/img")[0].get("data-src")
+IndexError: list index out of range
+2024-04-23 20:34:17,898 ERROR Exception occurred for link: https://www.labirint.ru/books/495/
+Traceback (most recent call last):
+  File "C:\Users\Никита\AppData\Local\Temp\ipykernel_8428\857958171.py", line 32, in <module>
     descr = descr[0].text_content()
 IndexError: list index out of range

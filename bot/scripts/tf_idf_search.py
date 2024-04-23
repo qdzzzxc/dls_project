@@ -7,35 +7,64 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-if os.path.exists(os.path.join(".", "all_rows.pqt")):
-    all_rows = pd.read_parquet("all_rows.pqt")
-else:
-    all_rows = pd.DataFrame(
-        columns=["id", "link", "name", "rate", "description", "reviews"]
-    )
+from sqlalchemy import text, create_engine
 
-    for name in os.listdir():
-        if name.endswith(".csv") and name.startswith("rows"):
-            temp_df = pd.read_csv(name)
-            all_rows = pd.concat([all_rows, temp_df])
+import aiopg
 
-    all_rows.to_parquet("all_rows.pqt", index=False)
+from config import *
 
-if os.path.exists(os.path.join(".", "vectorizer.pkl")) and os.path.exists(
-    os.path.join(".", "tfidf_vectors.npy")
+if DATA_TYPE == "PANDAS":
+    if os.path.exists(pqt_path := os.path.join("data", "tf-idf", "all_rows.pqt")):
+        all_rows = pd.read_parquet(pqt_path)
+    else:
+        all_rows = pd.DataFrame(
+            columns=["id", "link", "name", "rate", "description", "reviews"]
+        )
+
+        for name in os.listdir():
+            if name.endswith(".csv") and name.startswith("rows"):
+                temp_df = pd.read_csv(name)
+                all_rows = pd.concat([all_rows, temp_df])
+
+        all_rows.to_parquet(pqt_path, index=False)
+
+    def data_getter(x):
+        logging.info('pandas request')
+        return all_rows.iloc[x]
+elif DATA_TYPE == "SQL":
+    engine = create_engine(DSN, echo=False)
+
+    def data_getter(x):
+        logging.info('sql request')
+        with engine.connect() as conn:
+            ret = conn.execute(
+                text(
+                    f"select id, link, name, rate, description, reviews from all_rows where index = {x}"
+                )
+            ).fetchall()
+            return pd.Series(
+                ret[0], index=["id", "link", "name", "rate", "description", "reviews"]
+            )
+
+
+if os.path.exists(
+    vectorizer_path := os.path.join("data", "tf-idf", "vectorizer.pkl")
+) and os.path.exists(
+    vectors_path := os.path.join("data", "tf-idf", "tfidf_vectors.npy")
 ):
-    logging.info('Vectorizer loaded')
-    vectorizer = joblib.load("vectorizer.pkl")
+    logging.info("Vectorizer loaded")
+    vectorizer = joblib.load(vectorizer_path)
 
-    tfidf_vectors = np.load("tfidf_vectors.npy", allow_pickle=True).item()
+    tfidf_vectors = np.load(vectors_path, allow_pickle=True).item()
 else:
-    logging.info('Vectorizer created')
+    vectors_path = os.path.join("data", "tf-idf", "tfidf_vectors.npy")
+    logging.info("Vectorizer created")
     vectorizer = TfidfVectorizer()
 
     tfidf_vectors = vectorizer.fit_transform(all_rows.name)
 
-    joblib.dump(vectorizer, "vectorizer.pkl")
-    np.save("tfidf_vectors", tfidf_vectors)
+    joblib.dump(vectorizer, vectorizer_path)
+    np.save(vectors_path, tfidf_vectors)
 
 
 def cosine_search(new_sentence):
@@ -47,4 +76,4 @@ def cosine_search(new_sentence):
         new_tfidf_vector_array.reshape(1, -1), tfidf_vectors
     )
 
-    return all_rows.iloc[np.argmax(euclidean_dist)]
+    return data_getter(np.argmax(euclidean_dist))
