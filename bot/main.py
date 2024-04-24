@@ -6,7 +6,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.client.bot import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
-from config import *
+from config import *  # noqa: F403
 
 from handlers import image
 
@@ -16,15 +16,19 @@ def setup_routers(dp):
 
 
 async def on_startup(dispatcher):
-    logging.info(f"Started in {dt.datetime.now() - STARTUP_TIME}")
+    logging.info(f"Started in {dt.datetime.now() - STARTUP_TIME}")  # noqa: F405
 
 
 async def on_shutdown(dispatcher):
-    logging.info(f"Stopped, worked for {dt.datetime.now() - STARTUP_TIME}")
+    logging.info(
+        f"Stopped, worked for {dt.datetime.now() - STARTUP_TIME}")  # noqa: F405
 
 
 async def main():
-    bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    bot = Bot(
+        token=TOKEN,  # noqa: F405
+        default=DefaultBotProperties(parse_mode=ParseMode.HTML),
+    )
     dp = Dispatcher(storage=MemoryStorage())
 
     setup_routers(dp)

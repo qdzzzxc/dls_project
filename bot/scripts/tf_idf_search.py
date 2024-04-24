@@ -9,11 +9,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 from sqlalchemy import text, create_engine
 
-import aiopg
+from config import *  # noqa: F403
 
-from config import *
-
-if DATA_TYPE == "PANDAS":
+if DATA_TYPE == "PANDAS":  # noqa: F405
     if os.path.exists(pqt_path := os.path.join("data", "tf-idf", "all_rows.pqt")):
         all_rows = pd.read_parquet(pqt_path)
     else:
@@ -29,17 +27,22 @@ if DATA_TYPE == "PANDAS":
         all_rows.to_parquet(pqt_path, index=False)
 
     def data_getter(x):
-        logging.info('pandas request')
+        logging.info("pandas request")
         return all_rows.iloc[x]
-elif DATA_TYPE == "SQL":
-    engine = create_engine(DSN, echo=False)
+elif DATA_TYPE == "SQL":  # noqa: F405
+    engine = create_engine(DSN, echo=False)  # noqa: F405
 
     def data_getter(x):
-        logging.info('sql request')
+        logging.info("sql request")
         with engine.connect() as conn:
             ret = conn.execute(
                 text(
-                    f"select id, link, name, rate, description, reviews from all_rows where index = {x}"
+                    f"""select 
+                        id, link, name, rate, description, reviews 
+                    from 
+                        all_rows 
+                    where 
+                        index = {x}"""
                 )
             ).fetchall()
             return pd.Series(
@@ -63,8 +66,8 @@ else:
 
     tfidf_vectors = vectorizer.fit_transform(all_rows.name)
 
-    # joblib.dump(vectorizer, vectorizer_path)
-    # np.save(vectors_path, tfidf_vectors)
+    joblib.dump(vectorizer, vectorizer_path)
+    np.save(vectors_path, tfidf_vectors)
 
 
 def cosine_search(new_sentence):
@@ -77,6 +80,7 @@ def cosine_search(new_sentence):
     )
 
     return data_getter(np.argmax(euclidean_dist))
+
 
 def find_top_ten_books(new_sentence):
     new_tfidf_vector = vectorizer.transform([new_sentence])
