@@ -1,14 +1,180 @@
-[23/Apr/24 22:21:40] [INFO]: Started in 0:00:05.377443
-[23/Apr/24 22:21:40] [INFO]: Start polling
-[23/Apr/24 22:21:40] [INFO]: Run polling for bot @BooksCvAnalysisBot id=6636712785 - 'РђРЅР°Р»РёР· РєРЅРёРі РїРѕ С„РѕС‚Рѕ'
-[23/Apr/24 22:21:41] [INFO]: Update id=643794986 is handled. Duration 250 ms by bot id=6636712785
-[23/Apr/24 22:22:10] [INFO]: The masked text was received and saved
-[23/Apr/24 22:22:19] [INFO]: Yandex OCR has worked out
-[23/Apr/24 22:22:22] [INFO]: error correction with the mixtral worked out
-[23/Apr/24 22:22:22] [INFO]: sql request
-[23/Apr/24 22:22:22] [INFO]: Cosine search worked out
-[23/Apr/24 22:22:34] [INFO]: Mixtral answer generation worked out
-[23/Apr/24 22:22:34] [INFO]: Update id=643794987 is handled. Duration 24577 ms by bot id=6636712785
-[23/Apr/24 22:23:00] [INFO]: Polling stopped
-[23/Apr/24 22:23:00] [INFO]: Stopped, worked for 0:01:25.426538
-[23/Apr/24 22:23:00] [INFO]: Polling stopped for bot @BooksCvAnalysisBot id=6636712785 - 'РђРЅР°Р»РёР· РєРЅРёРі РїРѕ С„РѕС‚Рѕ'
+[24/Apr/24 18:52:25] [INFO]: Started in 0:00:05.258573
+[24/Apr/24 18:52:25] [INFO]: Start polling
+[24/Apr/24 18:52:25] [INFO]: Run polling for bot @BooksCvAnalysisBot id=6636712785 - 'Анализ книг по фото'
+[24/Apr/24 18:52:27] [INFO]: The masked text was received and saved
+[24/Apr/24 18:52:36] [INFO]: Yandex OCR has worked out
+[24/Apr/24 18:52:36] [INFO]: достоевский преступление наказание
+[24/Apr/24 18:52:42] [INFO]: error correction with the mixtral worked out
+[24/Apr/24 18:52:42] [INFO]: Достоевский Преступление и наказание
+[24/Apr/24 18:52:43] [INFO]: pandas request
+[24/Apr/24 18:52:43] [INFO]: Cosine search worked out
+[24/Apr/24 18:52:43] [INFO]: id                                                        366901
+link                       https://www.labirint.ru/books/366901/
+name                 Федор Достоевский: Преступление и наказание
+rate                                                        9.37
+description    Одно из "краеугольных" произведений русской и ...
+reviews        Жил да был Ф.М., но не радио-диапазон, а самый...
+Name: 9231, dtype: object
+[24/Apr/24 18:52:46] [CRITICAL]: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[24/Apr/24 18:52:46] [ERROR]: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[24/Apr/24 18:52:46] [INFO]: Update id=643795100 is not handled. Duration 20281 ms by bot id=6636712785
+[24/Apr/24 18:52:46] [ERROR]: Cause exception while process update id=643795100 by bot id=6636712785
+TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+Traceback (most recent call last):
+  File "c:\projects\dls_project\.venv\lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "c:\projects\dls_project\.venv\lib\site-packages\urllib3\connectionpool.py", line 537, in _make_request
+    response = conn.getresponse()
+  File "c:\projects\dls_project\.venv\lib\site-packages\urllib3\connection.py", line 466, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\python\python310\lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\python\python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\python\python310\lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\projects\dls_project\.venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "c:\projects\dls_project\.venv\lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+  File "c:\projects\dls_project\.venv\lib\site-packages\urllib3\util\retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "c:\projects\dls_project\.venv\lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "c:\projects\dls_project\.venv\lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "c:\projects\dls_project\.venv\lib\site-packages\urllib3\connectionpool.py", line 537, in _make_request
+    response = conn.getresponse()
+  File "c:\projects\dls_project\.venv\lib\site-packages\urllib3\connection.py", line 466, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\python\python310\lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\python\python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\python\python310\lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\projects\dls_project\bot\handlers\image.py", line 84, in get_llm_description
+    header_template, text = llm_from_series(row_data)
+  File "C:\projects\dls_project\bot\handlers\image.py", line 38, in llm_from_series
+    return header_template, mixtral.reviews_summary(header_template, description=description, reviews=reviews).content
+  File "C:\projects\dls_project\bot\scripts\llm\mixtral.py", line 55, in reviews_summary
+    response = llm.invoke(template)
+  File "c:\projects\dls_project\.venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 158, in invoke
+    self.generate_prompt(
+  File "c:\projects\dls_project\.venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 560, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 421, in generate
+    raise e
+  File "c:\projects\dls_project\.venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 411, in generate
+    self._generate_with_cache(
+  File "c:\projects\dls_project\.venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 632, in _generate_with_cache
+    result = self._generate(
+  File "C:\projects\dls_project\bot\scripts\llm\deepinfra.py", line 263, in _generate
+    response = self.completion_with_retry(
+  File "C:\projects\dls_project\bot\scripts\llm\deepinfra.py", line 219, in completion_with_retry
+    return _completion_with_retry(**kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\tenacity\__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+  File "c:\projects\dls_project\.venv\lib\site-packages\tenacity\__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "c:\projects\dls_project\.venv\lib\site-packages\tenacity\__init__.py", line 314, in iter
+    return fut.result()
+  File "C:\python\python310\lib\concurrent\futures\_base.py", line 438, in result
+    return self.__get_result()
+  File "C:\python\python310\lib\concurrent\futures\_base.py", line 390, in __get_result
+    raise self._exception
+  File "c:\projects\dls_project\.venv\lib\site-packages\tenacity\__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\projects\dls_project\bot\scripts\llm\deepinfra.py", line 209, in _completion_with_retry
+    response = request.post(
+  File "c:\projects\dls_project\.venv\lib\site-packages\langchain_community\utilities\requests.py", line 34, in post
+    return requests.post(
+  File "c:\projects\dls_project\.venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\requests\adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\projects\dls_project\bot\handlers\image.py", line 93, in get_llm_description
+    await msg.edit_text(f'Произошла ошибка {e.__class__.__name__}, попробуйте снова')
+  File "c:\projects\dls_project\.venv\lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+[24/Apr/24 18:52:46] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+[24/Apr/24 18:52:46] [WARNING]: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6636712785)
+[24/Apr/24 18:53:09] [INFO]: Connection established (tryings = 1, bot id = 6636712785)
+[24/Apr/24 19:46:34] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+[24/Apr/24 19:46:34] [WARNING]: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6636712785)
+[24/Apr/24 19:46:47] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+[24/Apr/24 19:46:47] [WARNING]: Sleep for 1.465093 seconds and try again... (tryings = 1, bot id = 6636712785)
+[24/Apr/24 19:46:49] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+[24/Apr/24 19:46:49] [WARNING]: Sleep for 1.953504 seconds and try again... (tryings = 2, bot id = 6636712785)
+[24/Apr/24 19:46:51] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+[24/Apr/24 19:46:51] [WARNING]: Sleep for 2.554062 seconds and try again... (tryings = 3, bot id = 6636712785)
+[24/Apr/24 19:46:53] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+[24/Apr/24 19:46:53] [WARNING]: Sleep for 3.299657 seconds and try again... (tryings = 4, bot id = 6636712785)
+[24/Apr/24 19:46:57] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+[24/Apr/24 19:46:57] [WARNING]: Sleep for 4.136907 seconds and try again... (tryings = 5, bot id = 6636712785)
+[24/Apr/24 19:47:05] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+[24/Apr/24 19:47:05] [WARNING]: Sleep for 5.100950 seconds and try again... (tryings = 6, bot id = 6636712785)
+[24/Apr/24 19:47:10] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+[24/Apr/24 19:47:10] [WARNING]: Sleep for 4.866502 seconds and try again... (tryings = 7, bot id = 6636712785)
+[24/Apr/24 19:47:15] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+[24/Apr/24 19:47:15] [WARNING]: Sleep for 5.072384 seconds and try again... (tryings = 8, bot id = 6636712785)
+[24/Apr/24 19:47:20] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+[24/Apr/24 19:47:20] [WARNING]: Sleep for 4.974952 seconds and try again... (tryings = 9, bot id = 6636712785)
+[24/Apr/24 19:47:25] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+[24/Apr/24 19:47:25] [WARNING]: Sleep for 4.967530 seconds and try again... (tryings = 10, bot id = 6636712785)
+[24/Apr/24 19:47:42] [ERROR]: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+[24/Apr/24 19:47:42] [WARNING]: Sleep for 4.828690 seconds and try again... (tryings = 11, bot id = 6636712785)

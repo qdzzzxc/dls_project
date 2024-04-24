@@ -63,8 +63,8 @@ else:
 
     tfidf_vectors = vectorizer.fit_transform(all_rows.name)
 
-    joblib.dump(vectorizer, vectorizer_path)
-    np.save(vectors_path, tfidf_vectors)
+    # joblib.dump(vectorizer, vectorizer_path)
+    # np.save(vectors_path, tfidf_vectors)
 
 
 def cosine_search(new_sentence):
@@ -77,3 +77,14 @@ def cosine_search(new_sentence):
     )
 
     return data_getter(np.argmax(euclidean_dist))
+
+def find_top_ten_books(new_sentence):
+    new_tfidf_vector = vectorizer.transform([new_sentence])
+
+    new_tfidf_vector_array = new_tfidf_vector.toarray()
+
+    euclidean_dist = cosine_similarity(
+        new_tfidf_vector_array.reshape(1, -1), tfidf_vectors
+    )
+
+    return [data_getter(x) for x in np.argsort(euclidean_dist)[:, -10:][::-1]][0]
