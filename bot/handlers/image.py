@@ -3,7 +3,7 @@ from aiogram import Bot, F, Router
 from aiogram.types import Message, CallbackQuery
 import logging
 
-from keyboards import not_this_book, not_this_book_again
+from keyboards import not_this_book, not_this_book_again, try_text_search
 
 from scripts.bb_text_extractor import get_masked_image
 from scripts.yandex_ocr import get_yandex_ocr
@@ -101,7 +101,8 @@ async def get_llm_description(message: Message, state: FSMContext, bot: Bot):
     except Exception as e:
         logging.error(e)
         await msg.edit_text(
-            f"Произошла ошибка {e.__class__.__name__}, попробуйте снова"
+            f"Произошла ошибка {e.__class__.__name__}, попробуйте снова",
+            reply_markup=try_text_search()
         )
         return
 
@@ -127,6 +128,14 @@ async def have_not_this_book(callback: CallbackQuery):
     await callback.message.edit_text(
         "К сожалению, моя база данных не содержит информацию о нужной вам книге"
     )
+
+
+@router.callback_query(F.data == "TextSearch")
+async def choose_from_10_books(callback: CallbackQuery, state: FSMContext):
+    await callback.message.edit_text(
+                "Отправьте сообщением название нужной вам книги"
+            )
+    await state.set_state(FindText.wait_for_type_request)
 
 
 @router.callback_query(FindText.choose_from_10)

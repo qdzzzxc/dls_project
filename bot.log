@@ -1,3 +1,21 @@
-[25/Apr/24 00:50:24] [INFO]: Started in 0:00:05.672703
-[25/Apr/24 00:50:24] [INFO]: Start polling
-[25/Apr/24 00:50:24] [INFO]: Run polling for bot @BooksCvAnalysisBot id=6636712785 - 'Анализ книг по фото'
+[25/Apr/24 01:12:15] [INFO]: Started in 0:00:05.190008
+[25/Apr/24 01:12:15] [INFO]: Start polling
+[25/Apr/24 01:12:15] [INFO]: Run polling for bot @BooksCvAnalysisBot id=6636712785 - 'Анализ книг по фото'
+[25/Apr/24 01:12:22] [INFO]: The masked text was received and saved
+[25/Apr/24 01:12:31] [INFO]: Yandex OCR has worked out
+[25/Apr/24 01:12:31] [INFO]: николай васильевич гоголь петербургские повести + русская каассик
+[25/Apr/24 01:12:35] [INFO]: error correction with the mixtral worked out
+[25/Apr/24 01:12:35] [INFO]: Николай Васильевич Гоголь Петербургские повести
+[25/Apr/24 01:12:35] [INFO]: pandas request
+[25/Apr/24 01:12:35] [INFO]: Cosine search worked out
+[25/Apr/24 01:12:58] [INFO]: Mixtral answer generation worked out
+[25/Apr/24 01:12:59] [INFO]: Update id=643795282 is handled. Duration 37250 ms by bot id=6636712785
+[25/Apr/24 01:13:03] [INFO]: The masked text was received and saved
+[25/Apr/24 01:13:11] [ERROR]: Message: 
+
+[25/Apr/24 01:13:13] [INFO]: Update id=643795283 is handled. Duration 11219 ms by bot id=6636712785
+[25/Apr/24 01:13:14] [INFO]: Update id=643795284 is handled. Duration 63 ms by bot id=6636712785
+[25/Apr/24 01:13:21] [INFO]: pandas request
+[25/Apr/24 01:13:21] [INFO]: Cosine search worked out
+[25/Apr/24 01:13:34] [INFO]: Mixtral answer generation worked out
+[25/Apr/24 01:13:34] [INFO]: Update id=643795285 is handled. Duration 13078 ms by bot id=6636712785
