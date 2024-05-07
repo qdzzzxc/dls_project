@@ -13,7 +13,7 @@ transform = transforms.Compose(
 )
 
 
-onnx_model = onnx.load("end2end.onnx")
+onnx_model = onnx.load("models/end2end.onnx")
 pytorch_model = ConvertModel(onnx_model)
 
 

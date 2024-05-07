@@ -94,6 +94,7 @@ async def get_llm_description(message: Message, state: FSMContext, bot: Bot):
         await message.answer(
             header_template + remove_urls(text), reply_markup=not_this_book()
         )
+        await state.clear()
         await state.set_state(FindText.is_correct)
         await state.update_data(text=text)
 
@@ -118,7 +119,7 @@ async def get_top_10_books(callback: CallbackQuery, state: FSMContext):
         "Выберите, какой текст вам нужен",
         reply_markup=not_this_book_again(top_10_books, typed=typed),
     )
-    await state.update_data(ten_books=top_10_books)
+    await state.update_data(ten_books=top_10_books, typed=False)
 
     await state.set_state(FindText.choose_from_10)
 
