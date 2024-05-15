@@ -2,8 +2,8 @@ import datetime as dt
 
 STARTUP_TIME = dt.datetime.now()
 
-TOKEN = '6636712785:AAEvOuGH2vy4ooS9AEufGQB_ZYVh0ExueS4'
+TOKEN = 'YOUR_TOKEN'
 
-DATA_TYPE = 'PANDAS'  # PANDAS
+DATA_TYPE = 'PANDAS'  # or SQL
 
-DSN = 'postgresql://test:test@localhost:5430/test_db'
+DSN = 'DSN'
